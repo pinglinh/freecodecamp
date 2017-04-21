@@ -16,24 +16,6 @@
 
 // ["S", "E", "R", "R", "  ", "P", "B", "Q", "R", " "," P", "N", "Z", "C"]
 
-
-
-
-function rotate(val) {
-  if (val !== val.toLowerCase()) {
-    return "X";
-  }
-  else {
-    return val;
-  }
-}
-
-[rotate("A"), rotate("."), rotate ("c"]);
-
-
-
-
-
 function rot13(str) {
   var result = "";
   var splitStr = str.split("");
@@ -63,15 +45,20 @@ function rot13(str) {
     "W": "J",
     "X": "K",
     "Y": "L",
-    "Z": "M"
-  }
-  
+    "Z": "M",
+    " ": " "
+  };
   for (var i = 0; i < splitStr.length; i++) {
-    result = decoded[splitStr];
+    var splitStrIndex = splitStr[i];
+    var capitalLetters = /[A-Z]/g; 
+    if (capitalLetters.test(splitStrIndex)) {
+      result += decoded[splitStrIndex];
+    } 
+    else {
+      result += splitStrIndex;
+    }
   }
-  
-  
   return result;
 }
 
-rot13("SERR PBQR PNZC");
+rot13("SERR PBQR PNZC!");
