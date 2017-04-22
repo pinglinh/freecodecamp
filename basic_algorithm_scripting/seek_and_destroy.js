@@ -16,3 +16,15 @@ function destroyer(arr) {
 
 destroyer(["tree", "hamburger", 53], "tree", 53);
 destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+// Alternative solution
+
+function destroyer(arr) {
+  var destroyMe = Array.from(arguments).slice(1);
+  return arr.filter(function(val) {
+    return destroyMe.indexOf(val) === -1;
+  });
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
