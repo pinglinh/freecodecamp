@@ -13,3 +13,16 @@ function titleCase(str) {
 }
 
 titleCase("HERE IS MY HANDLE HERE IS MY SPOUT");
+
+
+
+// Alternative solution
+
+function titleCase(str) {
+  var words = str.toLowerCase().split(" ");
+  return words.map(function(singleWord)) {
+    return singleWord[0].toUpperCase() + singleWord.substr(1); // substr() is every character from 1st to the end
+  }).join(" ");
+}
+
+titleCase("HERE IS MY HANDLE HERE IS MY SPOUT");
