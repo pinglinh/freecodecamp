@@ -30,3 +30,10 @@ function repeatStringNumTimes(str, num) {
 repeatStringNumTimes("abc", 3);
 
 
+// Short and faster code
+
+function repeatStringNumTimes(str, num) {
+  return str.repeat(Math.max(num, 0));
+}
+
+repeatStringNumTimes("abc", 3);
