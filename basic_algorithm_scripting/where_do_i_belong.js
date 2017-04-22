@@ -19,6 +19,20 @@ getIndexToIns([40, 60], 50);
 
 
 
+
+function getIndexToIns(arr, num) {
+  var count = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] < num) {
+      count ++;
+    }
+  }
+  return count;
+}
+getIndexToIns([40, 60], 50);
+
+
+
 // The alternative way is to insert num into the existing arr array by using the concat method. Then sorting the new array ascending way. Then we use the method indexOf to return us the index at which num is.
 
 
@@ -26,4 +40,12 @@ function getIndexToIns(arr, num) {
   var newArray = arr.concat([num]);
   newArray.sort((a,b) => a-b);
   return newArray.indexOf(num);
+}
+
+
+
+function getIndexToIns(arr, num) {
+  return arr.filter(function(val) {
+    return val < num;
+  }).length;
 }
