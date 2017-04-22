@@ -7,3 +7,16 @@ function findLongestWord(str) {
 }
 
 findLongestWord("The quick brown fox jumped over the lazy dog");
+
+// Alternative solution
+
+function findLongestWord(str) {
+  var longestWordLength = 0;
+  for (var word of str.split(" ")) {
+    var currentWordLength = word.length;
+    longestWordLength = Math.max(currentWordLength, longestWordLength);
+  }
+  return longestWordLength;
+}
+
+findLongestWord("The quick brown fox jumped over the lazy dog");
