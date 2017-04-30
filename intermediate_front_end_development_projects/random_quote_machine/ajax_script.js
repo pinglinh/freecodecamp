@@ -9,3 +9,9 @@ $("#new-quote").click(function(){
     success: got_quote
   });
 });
+
+$(document).ready(function() {
+
+
+
+});
