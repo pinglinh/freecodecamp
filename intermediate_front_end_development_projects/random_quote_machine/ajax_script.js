@@ -1,17 +1,22 @@
-function got_quote(quote) {
-  $("#quote").html(quote[0].content + "<p>— " + quote[0].title + "</p>");
+function get_quote(data) {
+  var quotesContainer = $(".quote-text");
+  var authorContainer = $(".author");
+  var theQuote = data[0].content;
+  var theAuthor = data[0].title;
+  $(quotesContainer).html(theQuote);
+  $(authorContainer).html(theAuthor);
 }
 
-$("#new-quote").click(function(){
-  var url = "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=";
-  $.ajax(url, {
-    cache: false,
-    success: got_quote
-  });
-});
-
 $(document).ready(function() {
-
-
-
+  $("#new-quote").click(function() {
+     $.ajax({
+      url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=",
+      type: "GET",
+      async: true,
+      crossDomain: true,
+      dataType: "json",
+      cache: false,
+      success: get_quote
+    });
+  });
 });
