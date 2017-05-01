@@ -11,7 +11,6 @@ body {
   text-align: center;
   position: relative;
   font-family: 'Asar', serif;
-
 }
 
 .quote {
@@ -44,6 +43,10 @@ button {
   font-weight: bold;
 }
 
+button:focus {
+  outline:0;
+}
+
 .fa-twitter {
   background-color: transparent;
 }
@@ -58,3 +61,24 @@ button {
   font-style: italic;
 }
 
+.credit {
+  text-decoration: none;
+}
+
+.footer {
+  color: #F4EEEE;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75em;
+}
+
+a {
+  color: #9EF5CF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: #39627F;
+  text-style: bold;
+}
