@@ -7,6 +7,14 @@ function get_quote(data) {
   $(authorContainer).html(theAuthor);
 }
 
+function tweet() {
+  var quotesContainer = $(".quote-text");
+  var authorContainer = $(".author");
+  var quote = quotesContainer.text() + "-" + authorContainer.text();
+  var url = "https://twitter.com/intent/tweet?text=" + encodeURI(quote);
+  window.open(url, 'newwindow');
+}
+
 $(document).ready(function() {
   $("#new-quote").click(function() {
      $.ajax({
@@ -19,4 +27,5 @@ $(document).ready(function() {
       success: get_quote
     });
   });
+  $("#twitter-button").click(tweet);
 });
