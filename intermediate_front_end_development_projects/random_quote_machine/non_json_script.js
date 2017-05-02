@@ -1,3 +1,5 @@
+// Script works but you have to store all the quotes in an array rather than just get it from somewhere else using an API.
+
 var quotes = [
   ["\"I'm ugly and I'm proud\"", "SpongeBob"],
   ["\"It took us three days to make that potato salad. Three days!\"", "Some fish from SpongeBob SquarePants lol"],

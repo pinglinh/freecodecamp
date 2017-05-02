@@ -1,3 +1,5 @@
+// Found the API to not work due to cross browser origin issues
+
 $(document).ready(function() {
   var quotesContainer = $("#quote-text");
   var authorContainer = $("#author");
