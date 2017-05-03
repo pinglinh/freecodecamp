@@ -1,0 +1,20 @@
+body {
+  background-color: #141829;
+  text-align: center;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.weather-box {
+  font-size: 3em;
+  font-weight: bold;
+  background-color: #21294C;
+  height: 7em;
+  width: 12em;
+  margin: auto;
+  position: relative;
+}
+
+.location {
+  font-size: 0.5em;
+  color: #F2DEA8;
+}
