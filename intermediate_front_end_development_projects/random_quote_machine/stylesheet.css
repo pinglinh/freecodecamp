@@ -5,27 +5,30 @@ body {
 .quote-box {
   background-color: #C0D9E5;
   width: 25em;
-  height: 15em;
+  min-height: 15em;
   margin: auto;
   padding: 2em;
   text-align: center;
   position: relative;
   font-family: 'Asar', serif;
+  display: block;
 }
 
 .quote {
   width: 25em;
   margin: auto;
-  height: 7.5em;
+  min-height: 15em;
   position: relative;
 }
 
 .buttons {
   width: 25em;
-  margin: auto;
-  padding: 1em 0;
-  height: 7.5em;
+  margin: auto 0;
+  min-height: 7.5em;
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button {
@@ -41,6 +44,15 @@ button {
   font-family: 'Source Sans Pro', sans-serif;
   margin: 0 10px;
   font-weight: bold;
+  transition: all 0.5s;
+}
+
+.new-quote-button {
+  min-width: 150px;
+}
+
+.twitter-button {
+  min-width: 80px;
 }
 
 button:focus {
@@ -70,15 +82,51 @@ button:focus {
   text-align: center;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 0.75em;
+
 }
 
 a {
-  color: #9EF5CF;
+  color: #C0D9E5;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: none;
-  color: #39627F;
+  color: #DDF5F7;
   text-style: bold;
+}
+
+.twitter-button:hover, .new-quote-button:hover {
+  background-color: #2d4463;
+}
+
+.twitter-button:active, .new-quote-button:active {
+  background-color: #2d4463;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.twitter-button span, .new-quote-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.twitter-button span:after, .new-quote-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  transition: 0.5s;;
+}
+
+.twitter-button:hover span, .new-quote-button:hover span {
+  padding-right: 25px;
+}
+
+
+.twitter-button:hover span:after, .new-quote-button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
