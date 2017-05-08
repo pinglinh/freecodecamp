@@ -8,10 +8,11 @@ body {
   font-size: 3em;
   font-weight: bold;
   background-color: #e8f1f5;
-  height: 7em;
+  min-height: 9em;
   width: 12em;
   margin: auto;
   position: relative;
+  border: 1px solid black;
 }
 
 .temp {
@@ -27,8 +28,42 @@ body {
   display: block;
 }
 
-#weather-icon {
+.weather-icon {
   display: inline-block;
   font-size: 2em;
   color: #415865;
+  padding: 30px;
+  animation-name: right-drive;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+}
+
+@keyframe right-drive {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(400px);
+  }
+}
+
+.credits {
+  color: #F4EEEE;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 0.75em;
+  margin: 30px;
+}
+
+.credits a {
+  color: #005691;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.credits a:hover {
+  a:hover {
+  text-decoration: none;
+  color: #004a7c;
+  text-style: bold;
 }
