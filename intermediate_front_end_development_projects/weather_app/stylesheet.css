@@ -20,6 +20,10 @@ body {
   color: #004a7c;
   font-family: 'Carrois Gothic SC', sans-serif;
   display: inline-block;
+  animation-name: left-drive;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
 .location {
@@ -34,18 +38,35 @@ body {
   color: #415865;
   padding: 30px;
   animation-name: right-drive;
-  animation-duration: 3s;
+  animation-duration: 1s;
   animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
 }
 
-@keyframe right-drive {
-  from {
-    transform: translateX(-100px);
+@keyframes right-drive {
+  0% {
+    transform: translateX(150px);
+    opacity: 0;
   }
-  to {
-    transform: translateX(400px);
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
+
+@keyframes left-drive {
+  0% {
+    transform: translateX(-150px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 
 .credits {
   color: #F4EEEE;
@@ -58,12 +79,16 @@ body {
 .credits a {
   color: #005691;
   text-decoration: none;
-  font-weight: bold;
 }
 
 .credits a:hover {
-  a:hover {
   text-decoration: none;
-  color: #004a7c;
-  text-style: bold;
+  color: #00375e;
+  font-weight: bold;
 }
+
+#heart-symbol {
+  color: #D65F5F;
+}
+
+@keyframes: ;
