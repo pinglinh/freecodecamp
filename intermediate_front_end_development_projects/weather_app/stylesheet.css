@@ -12,7 +12,12 @@ body {
   width: 12em;
   margin: auto;
   position: relative;
-  border: 1px solid black;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.weather-box:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
 .temp {
@@ -89,6 +94,117 @@ body {
 
 #heart-symbol {
   color: #D65F5F;
+  display: inline-block;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
-@keyframes: ;
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+
+
+
+.onoffswitch {
+  position: relative;
+  width: 116px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  margin: auto;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before,
+.onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 41px;
+  padding: 0;
+  line-height: 41px;
+  font-size: 25px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "°F";
+  padding-left: 14px;
+  background-color: #EEEEEE;
+  color: #005691;
+}
+
+.onoffswitch-inner:after {
+  content: "°C";
+  padding-right: 14px;
+  background-color: #EEEEEE;
+  color: #456173;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 38px;
+  margin: 1.5px;
+  background: #456173;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 71px;
+  border: 2px solid #FFFFFF;
+  border-radius: 50px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+  background-color: #005691;
+}
