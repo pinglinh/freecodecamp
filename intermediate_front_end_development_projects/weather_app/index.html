@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic+SC" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="stylesheet.css">
@@ -8,31 +9,37 @@
 </head>
 <body>
 
-<div class="weather-box">
-  <p>Weather</p>
-  <div class="onoffswitch">
-    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-    <label class="onoffswitch-label" for="myonoffswitch">
-     <span class="onoffswitch-inner"></span>
-    <span class="onoffswitch-switch"></span>
-  </label>
+  <div class="weather-box">
+    <p class="header">WEATHER</p>
+    <div class="onoffswitch">
+      <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+      <label class="onoffswitch-label" for="myonoffswitch">
+       <span class="onoffswitch-inner"></span>
+      <span class="onoffswitch-switch"></span>
+    </label>
+    </div>
+    <div class="temp-icon">
+
+      <div class="temp celsius">
+        <span class="fa fa-thermometer"></span> <span class="value"></span> °C</div>
+
+      <div class="temp fahrenheit hidden">
+        <span class="fa fa-thermometer"></span> <span class="value"></span> °F</div>
+
+
+      <div class="weather-icon">
+        <i class="wi" id="weather-icon"></i>
+      </div>
+    </div>
+    <div class="weather-description"></div>
+    <div class="location"><span class="fa fa-map-marker"></span> <span class="value"></span></div></div>
   </div>
-  <div class="temp"><span></span></div>
 
-  <div class="weather-icon">
-    <i class="wi" id="weather-icon"></i>
-  </div>
-
-  <div class="location"></div>
-</div>
-
-<div class="data"></div>
-
-<div class="credits">
-  <span id="heart-symbol">&hearts;</span>
-  <span style="color: #C0D9E5">
-      <a href="www.pinglinh.com">pinglinh</a>
-    </span>
+  <div class="credits">
+    <span id="heart-symbol">&hearts;</span>
+    <span style="color: #C0D9E5">
+        <a href="www.pinglinh.com">pinglinh</a>
+      </span>
 </div>
 
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
