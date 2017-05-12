@@ -71,7 +71,7 @@ $(document).ready(function() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(current_position);
   } else {
-    var url = weather_url_by_name("Wrocław, PL");
+    var url = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=London,uk&units=metric&APPID=2bc5677e833038c7c834f60caef3e3c3&mode=json"
     $.getJSON(url, set_weather);
   }
 });
