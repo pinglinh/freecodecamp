@@ -18,7 +18,7 @@ function tweet() {
 $(document).ready(function() {
   $("#new-quote").click(function() {
      $.ajax({
-      url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=",
+      url: "https://cors-anywhere.herokuapp.com/https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=",
       type: "GET",
       async: true,
       crossDomain: true,
