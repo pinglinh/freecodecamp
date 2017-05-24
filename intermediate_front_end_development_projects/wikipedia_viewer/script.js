@@ -1,3 +1,4 @@
+$(document).ready(function() {
 function search_results(data) {
   var results = data.query.search;
   $(".results-list").html("");
@@ -11,7 +12,11 @@ function search_results(data) {
   }
 }
 
-function search() {
+$("#search-form-id").click(search);
+
+function search(event) {
+  event.preventDefault();
+  console.log(event.currentTarget.action);
   var query = $('#search').val();
   console.log("searching", query);
   $.ajax({
@@ -27,3 +32,4 @@ function search() {
     success: search_results
   });
 }
+});
