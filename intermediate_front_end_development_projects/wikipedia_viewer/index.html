@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Wikipedia Viewer</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
   <h1>Wikipedia Viewer</h1>
-  <form class="search-form" id="search-form-id" action="https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&format=json" onsubmit="search()">
+  <form class="search-form" id="search-form-id">
     <span class="fa fa-search"></span>
-    <input type="text" placeholder="Search term" id="search" value="javascript">
-    <button class="search-button">Random Article</button>
+    <input type="text" placeholder="Type something" id="search">
+    <button id="search-button" type="button">Search</button>
   </form>
-  <ol class="results-list">
-
-
+  <ol id="results-list">
   </ol>
 
-  <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-   <script type="text/javascript" src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
