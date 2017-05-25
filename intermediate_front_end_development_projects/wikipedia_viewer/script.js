@@ -1,35 +1,41 @@
 $(document).ready(function() {
-function search_results(data) {
-  var results = data.query.search;
-  $(".results-list").html("");
-  for (var r of results) {
-    var li = $("<li></li>");
-    $(".results-list").append(li);
-    var link = "https://en.wikipedia.org/wiki/" +
-    r.title;
-    li.html("<h3><a href='"+link+"' target='_new_'>"+r.title+"</a></h3>"+"<div class='snippet'>"+r.snippet+"</div>"
+  function display_search_results(data) {
+    console.log(data);
+    var results = data.query.search;
+    $("#results-list").html("");
+    for (var single_result of results) {
+      $("#results-list").append(
+        `<li>
+          <h3>
+            <a href='https://en.wikipedia.org/wiki/${single_result.title}' target='_blank'>
+              ${single_result.title}
+            </a>
+          </h3>
+          <div class='snippet'>
+            ${single_result.snippet}
+          </div>
+        </li>`
       );
+    }
   }
-}
 
-$("#search-form-id").click(search);
+  function search(event) {
+    event.preventDefault(); // mostly have to do this with forms because otherwise the form will submit - if you don't have any action on the form, it will default to submit and as theres no action they submit to itself and just reloads
+    var query = $("#search").val();
+    $.ajax({
+      url: "https://en.wikipedia.org/w/api.php",
+        data: {
+        action: "query",
+        list: "search",
+        srsearch: query,
+        format: "json",
+        srprop: "snippet"
+      },
+      dataType: "jsonp",
+      success: display_search_results
+    });
+  }
 
-function search(event) {
-  event.preventDefault();
-  console.log(event.currentTarget.action);
-  var query = $('#search').val();
-  console.log("searching", query);
-  $.ajax({
-    url: 'https://en.wikipedia.org/w/api.php',
-    data: {
-      action: 'query',
-      list: 'search',
-      srsearch: query,
-      format: 'json',
-      srprop: 'snippet'
-    },
-    dataType: 'jsonp',
-    success: search_results
-  });
-}
+  $("#search-button").click(search);
+  $("#search-form-id").submit(search);
 });
