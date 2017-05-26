@@ -26,3 +26,7 @@ body {
   top: 10px;
   left: 10px;
 }
+
+input:focus {
+  outline: none;
+}
