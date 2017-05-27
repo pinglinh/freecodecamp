@@ -89,3 +89,9 @@ input:focus {
   text-decoration: none;
   color: #BE3144;
 }
+
+.single-result-box {
+  background-color: #D3D6DB;
+  padding: 20px;
+  margin: 20px;
+}
