@@ -16,6 +16,11 @@ body {
 
 h1 {
   font-family: 'Raleway', sans-serif;
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
 }
 
 .search-form {
@@ -36,7 +41,7 @@ input:focus {
 .search-input-field {
   border-radius: 5px;
   border: 1px solid black;
-  margin: auto;
+  margin: auto 0;
   height: 30px;
   width: 200px;
 }
@@ -44,11 +49,29 @@ input:focus {
 .search-button {
   border-radius: 5px;
   border: none;
+  margin: 0 5px;
+  height: 33px;
+  width: 33px;
+  background-color: #303841;
+  color: #D3D6DB;
+}
+
+.search-button:focus {
+  outline: none;
+}
+
+.random-article-button {
+  border-radius: 5px;
+  border: none;
   margin: auto;
   height: 33px;
   width: 33px;
   background-color: #303841;
   color: #D3D6DB;
+}
+
+.random-article-button {
+  outline: none;
 }
 
 /*results styling*/
