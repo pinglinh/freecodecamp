@@ -38,4 +38,7 @@ $(document).ready(function() {
 
   $("#search-button").click(search);
   $("#search-form-id").submit(search);
+  $("#random-article-button").click(function() {
+      window.open('https://en.wikipedia.org/wiki/Special:Random', '_blank')
+  });
 });
