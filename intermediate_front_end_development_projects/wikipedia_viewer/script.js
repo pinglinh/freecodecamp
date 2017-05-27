@@ -5,7 +5,8 @@ $(document).ready(function() {
     $("#results-list").html("");
     for (var single_result of results) {
       $("#results-list").append(
-        `<li class='single-result-box'>
+        `<li class='col-sm-6 col-lg-12 single-result-box'>
+        <div>
           <h3>
             <a class='result-links' href='https://en.wikipedia.org/wiki/${single_result.title}' target='_blank'>
               ${single_result.title}
@@ -13,6 +14,7 @@ $(document).ready(function() {
           </h3>
           <div class='snippet'>
             ${single_result.snippet}
+          </div>
           </div>
         </li>`
       );
