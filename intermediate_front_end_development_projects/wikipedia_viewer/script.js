@@ -7,7 +7,7 @@ $(document).ready(function() {
       $("#results-list").append(
         `<li>
           <h3>
-            <a class="result-links" href='https://en.wikipedia.org/wiki/${single_result.title}' target='_blank'>
+            <a class='result-links' href='https://en.wikipedia.org/wiki/${single_result.title}' target='_blank'>
               ${single_result.title}
             </a>
           </h3>
