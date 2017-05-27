@@ -66,7 +66,7 @@ input:focus {
 
 /*results styling*/
 
-.results-list ul {
+ul.results-list {
   font-family: 'Muli', sans-serif;
   list-style-type: none;
   padding: 0;
