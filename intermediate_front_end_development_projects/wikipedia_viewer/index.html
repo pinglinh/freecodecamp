@@ -5,17 +5,25 @@
   <meta charset="UTF-8">
   <title>Wikipedia Viewer</title>
   <link rel="stylesheet" href="stylesheet.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+  <script src="https://use.fontawesome.com/dc7df1b5a0.js"></script>
 </head>
 
 <body>
-  <h1>Wikipedia Viewer</h1>
-  <form class="search-form" id="search-form-id">
-    <span class="fa fa-search"></span>
-    <input type="text" placeholder="Type something" id="search">
-    <button id="search-button" type="button">Search</button>
-  </form>
-  <ol id="results-list">
-  </ol>
+  <div class="wrapper">
+    <div class="contents">
+      <h1><i class="fa fa-wikipedia-w" aria-hidden="true"></i>ikipedia Viewer</h1>
+        <form class="search-form" id="search-form-id">
+          <input type="text" placeholder="Type something" class="search-input-field" id="search">
+          <button class="search-button" id="search-button" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>
+    </div>
+    <div class="results-list">
+      <ul id="results-list">
+      </ul>
+    </div>
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="script.js"></script>
