@@ -5,7 +5,11 @@ function get_user(user, data) {
     $(".channels").append(
       `
       <div class="single-channel-off">
+
+        <img class="logo" src="http://placehold.it/150x150">
+
         <p><a href="${link}">${user}</a></p>
+
         <p>Offline</p>
       </div>
       `
@@ -15,9 +19,12 @@ function get_user(user, data) {
     $(".channels").append(
       `
       <div class="single-channel-on">
-          <img class="logo" src="${data.stream.channel.logo}">
-           <p><a href="${link}">${user}</a></p>
-           <p>Online</p>
+
+        <img class="logo" src="${data.stream.channel.logo}">
+
+        <p><a href="${link}">${user}</a></p>
+
+        <p>Online</p>
       </div>
       `
     );
