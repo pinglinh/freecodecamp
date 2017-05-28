@@ -11,7 +11,7 @@ function get_user(user, data) {
           <img class="logo" src="http://placehold.it/150x150">
 
 
-          <p><a href="${link}">${user}</a></p>
+          <p>Channel: <a href="${link}">${user}</a></p>
 
         </div>
 
@@ -34,7 +34,10 @@ function get_user(user, data) {
 
           <img class="logo" src="${data.stream.channel.logo}">
 
-          <p><a href="${link}">${user}</a></p>
+          <p>Channel: <a href="${link}">${user}</a></p>
+
+          <p>${data.stream.channel.game}</p>
+
         </div>
 
         <div class="offline-and-online-text">
