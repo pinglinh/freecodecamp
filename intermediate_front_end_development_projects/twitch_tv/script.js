@@ -6,11 +6,21 @@ function get_user(user, data) {
       `
       <div class="single-channel-off">
 
-        <img class="logo" src="http://placehold.it/150x150">
+        <div class="logo-and-link">
 
-        <p><a href="${link}">${user}</a></p>
+          <img class="logo" src="http://placehold.it/150x150">
 
-        <p>Offline</p>
+
+          <p><a href="${link}">${user}</a></p>
+
+        </div>
+
+        <div class="offline-and-online-text">
+
+          <p>Offline</p>
+
+        </div>
+
       </div>
       `
     );
@@ -20,11 +30,18 @@ function get_user(user, data) {
       `
       <div class="single-channel-on">
 
-        <img class="logo" src="${data.stream.channel.logo}">
+        <div class="logo-and-link">
 
-        <p><a href="${link}">${user}</a></p>
+          <img class="logo" src="${data.stream.channel.logo}">
 
-        <p>Online</p>
+          <p><a href="${link}">${user}</a></p>
+        </div>
+
+        <div class="offline-and-online-text">
+
+          <p>Online</p>
+
+        </div>
       </div>
       `
     );
