@@ -13,7 +13,7 @@ h1 {
 }
 
 .channels {
-  /*border-radius: 10px;*/
+  border-radius: 10px;
   max-width: 500px;
   margin: auto;
   padding: 0;
@@ -22,24 +22,22 @@ h1 {
 
 .logo {
   border-radius: 50%;
-  width: 20%;
+  width: 30%;
   height: auto;
   border: 2px solid #F6F6F6;
-  margin: 20px;
+  margin: 20px 20px 0 20px;
 }
 
 .single-channel-on {
   background-color: #6fe2b4;
-  border-bottom: 1px solid black;
   position: relative;
-  height: 150px;
+  height: 220px;
 }
 
 .single-channel-off {
   background-color: #ffa347;
-  border-bottom: 1px solid black;
   position: relative;
-  height: 150px;
+  height: 220px;
 }
 
 .logo-and-link {
