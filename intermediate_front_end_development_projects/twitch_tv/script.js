@@ -36,7 +36,7 @@ function get_user(user, data) {
 
           <p>Channel: <a href="${link}">${user}</a></p>
 
-          <p>${data.stream.channel.game}</p>
+          <p>Streaming: ${data.stream.channel.game}</p>
 
         </div>
 
