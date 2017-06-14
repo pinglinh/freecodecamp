@@ -72,9 +72,15 @@ ul.results-list {
   padding: 0;
 }
 
-.result-links {
+a.result-links {
   text-decoration: none;
   color: #BE3144;
+}
+
+a.result-links:hover {
+  text-decoration: none;
+  font-weight: bold;
+  color: #a53c49;
 }
 
 .single-result-box {
