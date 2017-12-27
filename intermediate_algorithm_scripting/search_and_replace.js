@@ -22,3 +22,11 @@ function myReplace(str, before, after) {
   separatedSentence.splice(indexOfBefore, 1, newAfter || after);
   return separatedSentence.join(" ");
 }
+
+// Simpler solution from FCC
+function myReplace(str, before, after) {
+  if (before[0] === before[0].toUpperCase()) {
+    after = after.replace(after[0], after[0].toUpperCase());
+  }
+  return str.replace(before, after);
+}
