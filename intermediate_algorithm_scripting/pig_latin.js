@@ -42,3 +42,17 @@ function translatePigLatin(str) {
 
 translatePigLatin("glove");
 
+// Remove hello variable and return that same line instead
+function translatePigLatin(str) {
+  if (str.charAt(0).match(/[aeiou]/)) {
+    return str + "way";
+  }
+    var indexOfFirstVowel = str.search(/[aeiou]/);
+    var splitString = str.split("");
+    var first = splitString.splice(0, indexOfFirstVowel); 
+    var newWord = splitString.concat(first);
+    return newWord.join('') + "ay";
+  }
+
+translatePigLatin("glove");
+
