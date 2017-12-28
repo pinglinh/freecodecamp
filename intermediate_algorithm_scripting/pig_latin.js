@@ -26,3 +26,19 @@ function translatePigLatin(str) {
 }
 
 translatePigLatin("glove");
+
+// Can also get rid of else to flatten the code a bit 
+function translatePigLatin(str) {
+  if (str.charAt(0).match(/[aeiou]/)) {
+    return str + "way";
+  }
+    var indexOfFirstVowel = str.search(/[aeiou]/);
+    var splitString = str.split("");
+    var first = splitString.splice(0, indexOfFirstVowel); 
+    var newWord = splitString.concat(first);
+    var hello = newWord.join('') + "ay";
+    return hello;
+}
+
+translatePigLatin("glove");
+
