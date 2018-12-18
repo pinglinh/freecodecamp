@@ -149,7 +149,7 @@ var averageRating = watchList.filter(rating => {
 }).map(rating => {
   return parseFloat(rating["imdbRating"]);
 }).reduce((total, rating, index, array) => {
-  return total + rating/ array.length
+  return total + rating / array.length
 }, 0)
 
 console.log(averageRating)
