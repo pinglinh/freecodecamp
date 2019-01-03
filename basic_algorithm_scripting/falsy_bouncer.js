@@ -11,11 +11,9 @@ bouncer([1, null, NaN, 2, undefined]);
 
 
 // Shorter version
-
+// e => e already checks for is true and anything falsey will be filtered out
 function bouncer(arr) {
-  return arr.filter(function(val) {
-    return val;
-  });
+  return arr.filter(e => e);
 }
 
 bouncer([1, null, NaN, 2, undefined]);
@@ -27,7 +25,7 @@ bouncer([1, null, NaN, 2, undefined]);
 
 // NaN is not-a-number, numbers such as 1,2,3,4 etc. are not NaN therefore will still return in the final array.
 
-
+// isNaN is actually a js function hence why we didn't need to write a function for it
 
 function isFalse(val) {
   return val === false;
